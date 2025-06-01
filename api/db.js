@@ -10,7 +10,7 @@ const pool = new Pool({
   host: process.env.NODE_ENV === 'development' ? 'localhost' : dbDomain,
   database: dbName,
   password: dbPassword,
-  port: 5432, // padrão PostgreSQL
+  port: 5432,
 });
 
 module.exports = pool;

@@ -9,7 +9,6 @@ const pool = require('./db');
 const app = express();
 app.use(express.json());
 
-// Exemplo: rota para listar clientes
 app.get('/users', async (req, res) => {
   try {
     const resultado = await pool.query('SELECT * FROM users');
@@ -30,7 +29,6 @@ app.get('/habits', async (req, res) => {
   }
 });
 
-// Rota de teste
 app.get('/', (req, res) => {
   res.send('API funcionando!');
 });
